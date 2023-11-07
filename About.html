@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Digvijay Designer</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      nav .wrapper {
+        position: relative;
+        /* max-width: 1300px; */
+        width: 100%;
+        padding: 0px 30px;
+        /* height: 70px; */
+        /* line-height: 70px; */
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .wrapper .logo a {
+        color: #f2f2f2;
+        font-size: 30px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .wrapper .nav-links {
+        display: inline-flex;
+      }
+
+      .nav-links li {
+        list-style: none;
+      }
+
+      .nav-links li a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 500;
+        padding: 9px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      @media (max-width: 700px) {
+        .nav-links li a {
+          color: black;
+          text-decoration: none;
+          font-size: 17px;
+          font-weight: 500;
+          padding: 9px 15px;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+        }
+      }
+
+      .nav-links li a:hover {
+        color: #198754;
+      }
+
+      .nav-links .mobile-item {
+        display: none;
+      }
+
+      .nav-links .drop-menu {
+        position: absolute;
+        background: rgb(226, 226, 226);
+        width: 180px;
+        line-height: 45px;
+        top: 85px;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .nav-links li:hover .drop-menu,
+      .nav-links li:hover .mega-box {
+        transition: all 0.3s ease;
+        top: 70px;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .drop-menu li a {
+        width: 100%;
+        display: block;
+        padding: 0 0 0 15px;
+        font-weight: 400;
+        border-radius: 0px;
+        color: black;
+      }
+
+      .mega-box {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 0 30px;
+        top: 85px;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .mega-box .content {
+        background: #e8e8e8;
+        padding: 25px 20px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .mega-box .content .row {
+        width: calc(25% - 30px);
+        line-height: 45px;
+      }
+
+      .content .row img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .content .row header {
+        color: #000000;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      .content .row .mega-links {
+        margin-left: -40px;
+        border-left: 1px solid rgba(255, 255, 255, 0.09);
+      }
+
+      .row .mega-links li {
+        padding: 0 20px;
+      }
+
+      .row .mega-links li a {
+        padding: 0px;
+        padding: 0 20px;
+        color: #000000;
+        font-size: 17px;
+        display: block;
+      }
+
+      .row .mega-links li a:hover {
+        color: green;
+      }
+
+      .wrapper .btn {
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+      }
+
+      .wrapper .btn.close-btn {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+      }
+
+      @media screen and (max-width: 970px) {
+        .wrapper .btn {
+          display: block;
+        }
+
+        .wrapper .nav-links {
+          position: fixed;
+          height: 100vh;
+          width: 100%;
+          max-width: 350px;
+          top: 0;
+          left: -100%;
+          background: #e0e0e0;
+          display: block;
+          padding: 50px 10px;
+          line-height: 50px;
+          overflow-y: auto;
+          box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+          transition: all 0.3s ease;
+        }
+
+        /* custom scroll bar */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+          background: #242526;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: #3a3b3c;
+        }
+
+        #menu-btn:checked ~ .nav-links {
+          left: 0%;
+        }
+
+        #menu-btn:checked ~ .btn.menu-btn {
+          display: none;
+        }
+
+        #close-btn:checked ~ .btn.menu-btn {
+          display: block;
+        }
+
+        .nav-links li {
+          margin: 15px 10px;
+        }
+
+        .nav-links li a {
+          padding: 0 20px;
+          display: block;
+          font-size: 20px;
+        }
+
+        .nav-links .drop-menu {
+          position: static;
+          opacity: 1;
+          top: 65px;
+          visibility: visible;
+          padding-left: 20px;
+          width: 100%;
+          max-height: 0px;
+          overflow: hidden;
+          box-shadow: none;
+          transition: all 0.3s ease;
+        }
+
+        #showDrop:checked ~ .drop-menu,
+        #showMega:checked ~ .mega-box {
+          max-height: 100%;
+        }
+
+        .nav-links .desktop-item {
+          display: none;
+        }
+
+        .nav-links .mobile-item {
+          display: block;
+          color: black;
+          font-size: 20px;
+          font-weight: 500;
+          padding-left: 20px;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+        }
+
+        .nav-links .mobile-item:hover {
+          background: #3a3b3c;
+        }
+
+        .drop-menu li {
+          margin: 0;
+        }
+
+        .drop-menu li a {
+          border-radius: 5px;
+          font-size: 18px;
+        }
+
+        .mega-box {
+          position: static;
+          top: 65px;
+          opacity: 1;
+          visibility: visible;
+          padding: 0 20px;
+          max-height: 0px;
+          overflow: hidden;
+          transition: all 0.3s ease;
+        }
+
+        .mega-box .content {
+          box-shadow: none;
+          flex-direction: column;
+          padding: 20px 20px 0 20px;
+        }
+
+        .mega-box .content .row {
+          width: 100%;
+          margin-bottom: 15px;
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .mega-box .content .row:nth-child(1),
+        .mega-box .content .row:nth-child(2) {
+          border-top: 0px;
+        }
+
+        .content .row .mega-links {
+          border-left: 0px;
+          padding-left: 15px;
+        }
+
+        .row .mega-links li {
+          margin: 0;
+        }
+
+        .content .row header {
+          font-size: 19px;
+        }
+      }
+
+      nav input {
+        display: none;
+      }
+
+      .body-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+      }
+
+      .body-text div {
+        font-size: 45px;
+        font-weight: 600;
+      }
+      /* .mega-links .nav-item .nav-link:hover{
+            color: red;
+        } */
+    </style>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <!-- <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="./assets/img/logos/logo2 (1).png" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div> -->
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#"
+            ><img src="./assets/img/logos/logo2 (1).png" width="20%" alt=""
+          /></a>
+        </div>
+        <input type="radio" name="slider" id="menu-btn" />
+        <input type="radio" name="slider" id="close-btn" />
+        <ul class="nav-links" style="margin: 0">
+          <label for="close-btn" class="btn close-btn"
+            ><i class="fas fa-times"></i
+          ></label>
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./About.html" class="nav-link">About</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a href="#" class="desktop-item nav-link">Dropdown Menu</a>
+            <input type="checkbox" id="showDrop" />
+            <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+            <ul class="drop-menu">
+              <li><a href="#">Drop menu 1</a></li>
+              <li><a href="#">Drop menu 2</a></li>
+              <li><a href="#">Drop menu 3</a></li>
+              <li><a href="#">Drop menu 4</a></li>
+            </ul>
+          </li> -->
+          <li class="nav-item">
+            <a href="#" class="desktop-item nav-link">New Arrivals</a>
+            <input type="checkbox" id="showMega" />
+            <label for="showMega" class="mobile-item">New Arrivals</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <img src="./assets/img/1-7.jpg" alt="" />
+                </div>
+                <div class="row">
+                  <header>Mens Wear</header>
+                  <ul class="mega-links">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Artwear</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Kotis</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Shirts</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Jackets</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Resort</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Shirts</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Dresses</a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Demo</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Classic</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Jackets</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">shervanees</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Kurtas</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Womens Wear</header>
+                  <ul class="mega-links">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Artwear</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Jackets</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Dresses</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Demo</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Resort Wear</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Shorts</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Dresses</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Demo</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Classic Wear</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Lehengas</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Dresses </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Demo</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a href="#" class="nav-link"></a>
+                    </li> -->
+                  </ul>
+                </div>
+                <!-- <div class="row">
+                  <header>Demo</header>
+                  <ul class="mega-links">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Demo</a>
+                    </li>
+                  </ul>
+                </div> -->
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact us</a></li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"
+          ><i class="fas fa-bars"></i
+        ></label>
+      </div>
+    </nav>
+
+    <section class="page-section mt-5">
+      <div class="section_padding"></div>
+      <div class="text-center mb-5">
+        <h2 class="section-heading text-uppercase">
+          <span>About The Brand </span>
+        </h2>
+        <!-- <h3 class="section-subheading text-muted">LAKME</h3> -->
+        <hr />
+      </div>
+      <div class="section_padding"></div>
+      <div class="container">
+        <div>
+          <p>
+            Digvijay Singh Fashion House in Gujarat has become a renowned and
+            esteemed brand, rooted in tradition and fashion principles. As they
+            proudly celebrate their 10th year in the industry, they credit their
+            success to the dedication of their team and visionary expertise of
+            their head designer, Digvijay Singh.
+          </p>
+          <p>
+            Their approach is centered around understanding their customers'
+            desires and emotions, treating fashion as a powerful means of
+            self-expression and storytelling. They specialize in crafting
+            garments that beautifully embody the dreams of modern brides, making
+            them an integral part of people's joyous celebrations.
+          </p>
+          <p>
+            Digvijay Singh, an alumnus of the prestigious National Institute of
+            Design in Ahmedabad, has showcased his remarkable collections at
+            esteemed Fashion Weeks. His exceptional talent has led him to design
+            for prominent Bollywood celebrities, and he has made significant
+            contributions to the film industry, garnering both popular acclaim
+            and critical recognition. Notably, Digvijay was recognized as a
+            finalist for the Young Design Entrepreneur award by the British
+            Council in 2010 and named one of Vogue India's 10 most promising
+            young designers, solidifying his position in the industry.
+          </p>
+        </div>
+        <div class="section_padding"></div>
+        <div class="row about_img">
+          <div class="col-lg-6 col-md-12">
+            <img src="./assets/img/s-1.JPG" width="100%" alt="" />
+            <!-- <div class="overlay_img"></div> -->
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <!-- <div class="overlay_img w-100"></div> -->
+            <img src="./assets/img/s-2.jpg" width="100%" alt="" />
+          </div>
+        </div>
+        <div class="section_padding"></div>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 m-auto">
+            <h3 class="m-auto mb-3">About The Designer</h3>
+
+            <p>
+              In 2007, Digvijay Singh founded his renowned label during his
+              second year of fashion studies. Despite briefly exploring
+              physiotherapy, he found his true passion in fashion, starting with
+              basic designs and selling them door-to-door in Gujarat. Little did
+              he know that this humble beginning would lead him to incredible
+              heights in his profession.
+            </p>
+            <p>
+              Digvijay Singh, though humble and compassionate, exudes warmth and
+              innocence. His dedication to creating ensembles that embody the
+              grace of traditional attire, coupled with his unique fashion
+              sense, propelled his brand to unparalleled success. Even during
+              his first year of graduation at INIFD, Vadodara, he received the
+              prestigious 'Most Innovative Collection' award. However, he finds
+              the smiles of satisfaction from his customers to be the most
+              rewarding.
+            </p>
+            <p>
+              Today, Digvijay Singh stands as one of Gujarat's most celebrated
+              fashion designers, particularly renowned for his bridal fashion
+              creations. His boundless creativity and success seem to have no
+              limits.
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <img src="./assets/img/digvijaysingh1.jpg" width="100%" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row align-items-center text-white justify-content-center">
+          <div class="col">
+            <div class="row d-md-flex flex-lg-column">
+              <div class="col text-start">
+                <img
+                  src="./assets/img/logos/footer_logo.png"
+                  width="25%"
+                  alt=""
+                />
+              </div>
+              <div class="col text-start pt-2">
+                <p>
+                  Welcome to the official website of celebrated designer <br />
+                  Digvijay Singh.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row d-md-flex flex-lg-column">
+              <div class="col text-start">
+                <p>
+                  109, Shivalik Shilp II, <br />
+                  Opposite ITC Narmada, <br />
+                  Keshavbaug, <br />
+                  Ahmedabad, India.
+                </p>
+              </div>
+              <div class="col text-start">
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="https://wa.me/9925277862"
+                  target="_blank"
+                  ><i class="fab fa-whatsapp" target="_blank"></i
+                ></a>
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="https://www.facebook.com/digvijay.singh.digi?mibextid=ZbWKwL"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="https://www.instagram.com/digvijaysingh_artwear/?igshid=YzcxN2Q2NzY0OA%3D%3D"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="bg-white" />
+        <span class="text-white"
+          >@2022 Outlead solution. All rights reserved</span
+        >
+      </div>
+    </footer>
+    <!-- Portfolio Modals-->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script>
+      function performSearch() {
+        var searchQuery = document.getElementById("search-input").value;
+        var searchResults = document.getElementById("search-results");
+
+        // You can replace this with your own search logic
+        // For demonstration, we'll simply display the search query
+        searchResults.innerHTML = "Search Results for: " + searchQuery;
+      }
+
+      // Attach the search function to the button click event
+      document
+        .getElementById("search-button")
+        .addEventListener("click", performSearch);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Agency - Start Bootstrap Theme</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="
+    https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <style>
+      nav .wrapper {
+        position: relative;
+        /* max-width: 1300px; */
+        width: 100%;
+        padding: 0px 30px;
+        /* height: 70px; */
+        /* line-height: 70px; */
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .wrapper .logo a {
+        color: #f2f2f2;
+        font-size: 30px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .wrapper .nav-links {
+        display: inline-flex;
+      }
+
+      .nav-links li {
+        list-style: none;
+      }
+
+      .nav-links li a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 500;
+        padding: 9px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      @media (max-width: 700px) {
+        .nav-links li a {
+          color: black;
+          text-decoration: none;
+          font-size: 17px;
+          font-weight: 500;
+          padding: 9px 15px;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+        }
+      }
+
+      .nav-links li a:hover {
+        color: #198754;
+      }
+
+      .nav-links .mobile-item {
+        display: none;
+      }
+
+      .nav-links .drop-menu {
+        position: absolute;
+        background: rgb(226, 226, 226);
+        width: 180px;
+        line-height: 45px;
+        top: 85px;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .nav-links li:hover .drop-menu,
+      .nav-links li:hover .mega-box {
+        transition: all 0.3s ease;
+        top: 70px;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .drop-menu li a {
+        width: 100%;
+        display: block;
+        padding: 0 0 0 15px;
+        font-weight: 400;
+        border-radius: 0px;
+        color: black;
+      }
+
+      .mega-box {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 0 30px;
+        top: 85px;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .mega-box .content {
+        background: #e8e8e8;
+        padding: 25px 20px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .mega-box .content .row {
+        width: calc(25% - 30px);
+        line-height: 45px;
+      }
+
+      .content .row img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .content .row header {
+        color: #000000;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .content .row .mega-links {
+        margin-left: -40px;
+        border-left: 1px solid rgba(255, 255, 255, 0.09);
+      }
+
+      .row .mega-links li {
+        padding: 0 20px;
+      }
+
+      .row .mega-links li a {
+        padding: 0px;
+        padding: 0 20px;
+        color: #000000;
+        font-size: 17px;
+        display: block;
+      }
+
+      .row .mega-links li a:hover {
+        color: green;
+      }
+
+      .wrapper .btn {
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+      }
+
+      .wrapper .btn.close-btn {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+      }
+
+      @media screen and (max-width: 970px) {
+        .wrapper .btn {
+          display: block;
+        }
+
+        .wrapper .nav-links {
+          position: fixed;
+          height: 100vh;
+          width: 100%;
+          max-width: 350px;
+          top: 0;
+          left: -100%;
+          background: #e0e0e0;
+          display: block;
+          padding: 50px 10px;
+          line-height: 50px;
+          overflow-y: auto;
+          box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+          transition: all 0.3s ease;
+        }
+
+        /* custom scroll bar */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+          background: #242526;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: #3a3b3c;
+        }
+
+        #menu-btn:checked ~ .nav-links {
+          left: 0%;
+        }
+
+        #menu-btn:checked ~ .btn.menu-btn {
+          display: none;
+        }
+
+        #close-btn:checked ~ .btn.menu-btn {
+          display: block;
+        }
+
+        .nav-links li {
+          margin: 15px 10px;
+        }
+
+        .nav-links li a {
+          padding: 0 20px;
+          display: block;
+          font-size: 20px;
+        }
+
+        .nav-links .drop-menu {
+          position: static;
+          opacity: 1;
+          top: 65px;
+          visibility: visible;
+          padding-left: 20px;
+          width: 100%;
+          max-height: 0px;
+          overflow: hidden;
+          box-shadow: none;
+          transition: all 0.3s ease;
+        }
+
+        #showDrop:checked ~ .drop-menu,
+        #showMega:checked ~ .mega-box {
+          max-height: 100%;
+        }
+
+        .nav-links .desktop-item {
+          display: none;
+        }
+
+        .nav-links .mobile-item {
+          display: block;
+          color: black;
+          font-size: 20px;
+          font-weight: 500;
+          padding-left: 20px;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+        }
+
+        .nav-links .mobile-item:hover {
+          background: #3a3b3c;
+        }
+
+        .drop-menu li {
+          margin: 0;
+        }
+
+        .drop-menu li a {
+          border-radius: 5px;
+          font-size: 18px;
+        }
+
+        .mega-box {
+          position: static;
+          top: 65px;
+          opacity: 1;
+          visibility: visible;
+          padding: 0 20px;
+          max-height: 0px;
+          overflow: hidden;
+          transition: all 0.3s ease;
+        }
+
+        .mega-box .content {
+          box-shadow: none;
+          flex-direction: column;
+          padding: 20px 20px 0 20px;
+        }
+
+        .mega-box .content .row {
+          width: 100%;
+          margin-bottom: 15px;
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .mega-box .content .row:nth-child(1),
+        .mega-box .content .row:nth-child(2) {
+          border-top: 0px;
+        }
+
+        .content .row .mega-links {
+          border-left: 0px;
+          padding-left: 15px;
+        }
+
+        .row .mega-links li {
+          margin: 0;
+        }
+
+        .content .row header {
+          font-size: 19px;
+        }
+      }
+
+      nav input {
+        display: none;
+      }
+
+      .body-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+      }
+
+      .body-text div {
+        font-size: 45px;
+        font-weight: 600;
+      }
+      /* .mega-links .nav-item .nav-link:hover{
+            color: red;
+            
+        } */
+      .realtives {
+        position: relative;
+      }
+      #owl-demo .item {
+        margin: 3px;
+        color: #fff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        text-align: center;
+      }
+      #owl-demo .item img {
+        width: 100%;
+        height: auto;
+      }
+      #owl-demo1 .item {
+        margin: 3px;
+        color: #fff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        text-align: center;
+      }
+      #owl-demo1 .item img {
+        width: 100%;
+        height: auto;
+      }
+      .customNavigation {
+        text-align: right;
+        margin-top: 10px;
+        margin-bottom: 3px;
+        padding-bottom: 3px;
+        border-bottom: 2px solid #4f876c;
+      }
+      .customNavigation a {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      .customNavigation .prev,
+      .customNavigation .prev1,
+      .customNavigation .next,
+      .customNavigation .next1 {
+        background-color: #4f876c;
+        color: white;
+        width: 100px;
+        opacity: 0.4;
+        margin-bottom: 20px;
+      }
+      .customNavigation .prev:hover,
+      .customNavigation .prev1:hover,
+      .customNavigation .next:hover,
+      .customNavigation .next1:hover {
+        background-color: #4f876c;
+        color: white;
+        width: 100px;
+        opacity: 1;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 600px) {
+        .customNavigation .prev,
+        .customNavigation .prev1,
+        .customNavigation .next,
+        .customNavigation .next1 {
+          background-color: #4f876c;
+          color: white;
+          width: 50px;
+          opacity: 0.4;
+          margin-bottom: 0px;
+        }
+        .customNavigation .prev:hover,
+        .customNavigation .prev1:hover,
+        .customNavigation .next:hover,
+        .customNavigation .next1:hover {
+          background-color: #4f876c;
+          color: white;
+          width: 50px;
+          opacity: 1;
+          margin-bottom: 0px;
+        }
+      }
+      .customNavigation h3 {
+        color: black;
+      }
+      .customNavigation h3 span {
+        color: #4f876c;
+      }
+    </style>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <!-- <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="./assets/img/logos/logo2 (1).png" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div> -->
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#"
+            ><img src="./assets/img/logos/logo2 (1).png" width="20%" alt=""
+          /></a>
+        </div>
+        <input type="radio" name="slider" id="menu-btn" />
+        <input type="radio" name="slider" id="close-btn" />
+        <ul class="nav-links" style="margin: 0">
+          <label for="close-btn" class="btn close-btn"
+            ><i class="fas fa-times"></i
+          ></label>
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./About.html" class="nav-link">About</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a href="#" class="desktop-item nav-link">Dropdown Menu</a>
+            <input type="checkbox" id="showDrop" />
+            <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+            <ul class="drop-menu">
+              <li><a href="#">Drop menu 1</a></li>
+              <li><a href="#">Drop menu 2</a></li>
+              <li><a href="#">Drop menu 3</a></li>
+              <li><a href="#">Drop menu 4</a></li>
+            </ul>
+          </li> -->
+          <li class="nav-item">
+            <a href="#" class="desktop-item nav-link">New Arrivals</a>
+            <input type="checkbox" id="showMega" />
+            <label for="showMega" class="mobile-item">New Arrivals</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <img src="./assets/img/1-7.jpg" alt="" />
+                </div>
+                <div class="row">
+                  <header>Mens Wear</header>
+                  <ul class="mega-links">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Artwear</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Kotis</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Shirts</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Jackets</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Resort</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Shirts</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Dresses</a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Demo</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Classic</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Jackets</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">shervanees</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Kurtas</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Womens Wear</header>
+                  <ul class="mega-links">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Artwear</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Jackets</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Dresses</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Demo</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Resort Wear</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Shorts</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Dresses</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Demo</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Classic Wear</a>
+                      <ul class="mega-links">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Lehengas</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Dresses </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">Demo</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                        </li> -->
+                      </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a href="#" class="nav-link"></a>
+                    </li> -->
+                  </ul>
+                </div>
+                <!-- <div class="row">
+                  <header>Demo</header>
+                  <ul class="mega-links">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Demo</a>
+                    </li>
+                  </ul>
+                </div> -->
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact us</a></li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"
+          ><i class="fas fa-bars"></i
+        ></label>
+      </div>
+    </nav>
+    <section class="page-section mt-5">
+      <div class="text-center mb-5">
+        <div class="section_padding"></div>
+        <h2 class="section-heading text-uppercase">
+          <span>Mens Wear</span>
+        </h2>
+        <!-- <h3 class="section-subheading text-muted">LAKME</h3> -->
+        <hr />
+      </div>
+      <div class="container">
+        <div id="demo">
+          <div class="container-fluid">
+            <div class="row">
+              <div class=" ">
+                <div
+                  class="customNavigation d-flex justify-content-between align-items-center"
+                >
+                  <h3>Special <span>Wear</span></h3>
+                  <div>
+                    <a class="btn prev"><i class="fa fa-caret-left"></i></a>
+                    <a class="btn next"><i class="fa fa-caret-right"></i></a>
+                  </div>
+                </div>
+                <div id="owl-demo" class="owl-carousel">
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/Abstract black and white shirt.jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/Multi landscapes shirt.jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/Rhododendron shirt.jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section_padding"></div>
+      <div class="container">
+        <div class="text-center mb-5">
+          <!-- <h2 class="section-heading">
+            <span>ArtWear</span>
+          </h2> -->
+          <div
+            class="customNavigation d-flex justify-content-between align-items-center text-center"
+          >
+            <h3 class="m-auto">Art <span>Wear</span></h3>
+            <!-- <div>
+              <a class="btn prev"><i class="fa fa-caret-left"></i></a>
+              <a class="btn next"><i class="fa fa-caret-right"></i></a>
+            </div> -->
+          </div>
+          <div
+            class="untree_co-section product-section before-footer-section page-section"
+          >
+            <div class="container">
+              <div class="row justify-content-center">
+                <!-- Start Column 1 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Landscape waistcoat .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">The Landscape waistcoat</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- End Column 1 -->
+
+                <!-- Start Column 2 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The sunflower khadi shirt.jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">The sunflower khadi shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- End Column 2 -->
+
+                <!-- Start Column 3 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Village Artwork waistcoat.jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">The Village Artwork waistcoat</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- End Column 3 -->
+
+                <!-- Start Column 4 -->
+                <!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- <hr /> -->
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="text-center mb-5">
+          <!-- <h2 class="section-heading">
+            <span>ArtWear</span>
+          </h2> -->
+          <div
+            class="customNavigation d-flex justify-content-between align-items-center text-center"
+          >
+            <h3 class="m-auto">Resort <span>Wear</span></h3>
+            <!-- <div>
+              <a class="btn prev"><i class="fa fa-caret-left"></i></a>
+              <a class="btn next"><i class="fa fa-caret-right"></i></a>
+            </div> -->
+          </div>
+          <div
+            class="untree_co-section product-section before-footer-section page-section"
+          >
+            <div class="container">
+              <div class="row justify-content-center">
+                <!-- Start Column 1 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/Resortwear/Abstract black and white shirt.jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">
+                      Abstract black and white shirt
+                    </h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- End Column 1 -->
+
+                <!-- Start Column 2 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/Resortwear/Multi landscapes shirt.jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- End Column 2 -->
+
+                <!-- Start Column 3 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/Resortwear/Rhododendron shirt.jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Rhododendron shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- End Column 3 -->
+
+                <!-- Start Column 4 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/Resortwear/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">The Portrait shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- <hr /> -->
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="text-center mb-5">
+          <!-- <h2 class="section-heading">
+            <span>ArtWear</span>
+          </h2> -->
+          <div
+            class="customNavigation d-flex justify-content-between align-items-center text-center"
+          >
+            <h3 class="m-auto">Classic <span>Wear</span></h3>
+            <!-- <div>
+              <a class="btn prev"><i class="fa fa-caret-left"></i></a>
+              <a class="btn next"><i class="fa fa-caret-right"></i></a>
+            </div> -->
+          </div>
+          <div
+            class="untree_co-section product-section before-footer-section page-section"
+          >
+            <div class="container">
+              <div class="row justify-content-center">
+                <!-- Start Column 1 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/classicwear/Cocktail Silk Shirt (1).jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Cocktail Silk Shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- End Column 1 -->
+
+                <!-- Start Column 2 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/classicwear/Cocktail Silk Shirt.jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Cocktail Silk Shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- End Column 2 -->
+
+                <!-- Start Column 3 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/classicwear/Quilted Jacket .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Quilted Jacket</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- End Column 3 -->
+
+                <!-- Start Column 4 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/classicwear/The Classic Bandhgala.jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">The Classic Bandhgala</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mb-5">
+                  <a class="product-item" href="#">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      class="img-fluid product-thumbnail"
+                    />
+                    <h3 class="product-title">Multi landscapes shirt</h3>
+                    <strong class="product-price">$-</strong>
+
+                    <span class="icon-cross">
+                      <img src="images/cross.svg" class="img-fluid" />
+                    </span>
+                  </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- <hr /> -->
+        </div>
+      </div>
+
+      <!-- <div class="container">
+        <div id="demo1">
+          <div class="container-fluid">
+            <div class="row">
+              <div class=" ">
+                <div
+                  class="customNavigation d-flex justify-content-between align-items-center"
+                >
+                  <h3>Women <span>Wear</span></h3>
+                  <div>
+                    <a class="btn prev1"><i class="fa fa-caret-left"></i></a>
+                    <a class="btn next1"><i class="fa fa-caret-right"></i></a>
+                  </div>
+                </div>
+                <div id="owl-demo1" class="owl-carousel">
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/Abstract black and white shirt.jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/Multi landscapes shirt.jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/Rhododendron shirt.jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="https://goo.gl/q6N4t7"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="./assets/img/products img/The Portrait shirt .jpg"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                  <div class="item">
+                    <img
+                      src="https://goo.gl/q6N4t7"
+                      alt="Mahi_Product_Slider"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row align-items-center text-white justify-content-center">
+          <div class="col-lg-6 col-md-12">
+            <div class="row d-md-flex flex-lg-column">
+              <div class="col-lg-12 col-md-6 text-start">
+                <img
+                  src="./assets/img/logos/footer_logo.png"
+                  width="25%"
+                  alt=""
+                />
+              </div>
+              <div class="col-lg-12 col-md-6 text-start pt-2">
+                <p>
+                  Welcome to the official website of celebrated designer <br />
+                  Digvijay Singh.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="row d-md-flex flex-lg-column footer_address">
+              <div class="col-lg-12 col-md-6 text-start">
+                <p>
+                  109, Shivalik Shilp II, <br />
+                  Opposite ITC Narmada, <br />
+                  Keshavbaug, <br />
+                  Ahmedabad, India.
+                </p>
+              </div>
+              <div class="col-lg-12 col-md-6 text-start">
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="https://wa.me/9925277862"
+                  target="_blank"
+                  ><i class="fab fa-whatsapp" target="_blank"></i
+                ></a>
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="https://www.facebook.com/digvijay.singh.digi?mibextid=ZbWKwL"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  class="btn btn-dark btn-social mx-2"
+                  href="https://www.instagram.com/digvijaysingh_artwear/?igshid=YzcxN2Q2NzY0OA%3D%3D"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="bg-white" />
+        <span class="text-white"
+          >@2022 Outlead solution. All rights reserved</span
+        >
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var owl1 = $("#owl-demo");
+        owl1.owlCarousel({
+          autoPlay: 3000,
+          items: 4,
+          itemsDesktop: [1000, 4],
+          itemsDesktopSmall: [900, 3],
+          itemsTablet: [600, 2],
+          itemsMobile: false,
+          pagination: false,
+        });
+
+        var owl2 = $("#owl-demo1"); // New variable for the second carousel
+        owl2.owlCarousel({
+          autoPlay: 3000,
+          items: 4,
+          itemsDesktop: [1000, 4],
+          itemsDesktopSmall: [900, 3],
+          itemsTablet: [600, 2],
+          itemsMobile: false,
+          pagination: false,
+        });
+
+        // Navigation for the first carousel
+        $(".next").click(function () {
+          owl1.trigger("owl.next");
+        });
+        $(".prev").click(function () {
+          owl1.trigger("owl.prev");
+        });
+
+        // Navigation for the second carousel
+        $(".next1").click(function () {
+          // Use the new class for the second carousel's next button
+          owl2.trigger("owl.next");
+        });
+        $(".prev1").click(function () {
+          // Use the new class for the second carousel's previous button
+          owl2.trigger("owl.prev");
+        });
+      });
+      function performSearch() {
+        var searchQuery = document.getElementById("search-input").value;
+        var searchResults = document.getElementById("search-results");
+
+        // You can replace this with your own search logic
+        // For demonstration, we'll simply display the search query
+        searchResults.innerHTML = "Search Results for: " + searchQuery;
+      }
+
+      // Attach the search function to the button click event
+      document
+        .getElementById("search-button")
+        .addEventListener("click", performSearch);
+    </script>
+  </body>
+</html>

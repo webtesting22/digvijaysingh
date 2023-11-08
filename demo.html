@@ -1,135 +1,876 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <style>
-      /* Default styles for the modal */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-      }
 
-      .modal-content {
-        background-color: #fff;
-        margin: 15% auto;
-        padding: 20px;
-        width: 70%;
-        border: 1px solid #888;
-        border-radius: 5px;
-      }
+<head>
 
-      .close {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        font-size: 24px;
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Aaryaneev</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- Favicon
+  ================================================== -->
+  <link rel="icon" type="image/png" href="img/Aaryaneev_logo1.png">
+
+  <!-- CSS
+  ================================================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+  <!-- Animation -->
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <!-- slick Carousel -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <!-- Colorbox -->
+  <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
+  <!-- Template styles-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <style>
+    .label {
+        font-size: 18px;
+        color: #333;
         cursor: pointer;
+        margin: 10px;
       }
 
-      /* Mobile styles */
-      @media screen and (max-width: 768px) {
-        .modal-content {
-          width: 90%;
-        }
+      .active {
+        color: red;
       }
+  </style>
+</head>
+<script>
+  function myFunction(e) {
+    for (let i = 0; i < e; i++) {
+      let newBtn = document.createElement('button');
+      newBtn.innerText = "Click me";
+      document.querySelector('#button-container').appendChild(newBtn);
+    }
+  }
+</script>
 
-      /* Tablet styles */
-      @media screen and (min-width: 769px) and (max-width: 1024px) {
-        .modal-content {
-          width: 80%;
-        }
-      }
+<body>
+  <div class="body-inner">
 
-      /* PC styles */
-      @media screen and (min-width: 1025px) {
-        .modal-content {
-          width: 70%;
-        }
-      }
-      .modal-content .image-gallery img {
-        margin: 5px; /* Add a slight margin around each image */
-        max-width: 20%; /* Ensure images don't exceed their container width */
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Buttons to trigger modal content -->
-    <button id="button1">Button 1</button>
-    <button id="button2">Button 2</button>
-    <button id="button3">Button 3</button>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <div id="modalContent" class="image-gallery">
-          <!-- Images will be shown here -->
-        </div>
-      </div>
+    <div class="preloader">
+        <img src="./img/Aaryaneev_logo.png" alt="Preloader Image">
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Header start -->
+    <header id="header" class="header-one">
+
+
+      <div class="site-navigation">
+        <div class="container">
+          <div class="row" id="nav_row">
+            <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0 d-flex">
+              <a class="d-block w-75" href="index.html">
+                <img loading="lazy" src="img/Aaryaneev_logo.png" alt="Aaryaneev">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class='bx bx-menu'></i>
+              </button>
+            </div>
+            <div class="col-lg-9">
+              <nav class="navbar navbar-expand-lg  p-0">
+
+
+                <div id="navbar-collapse" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item ">
+                      <a href="index.html" class="nav-link">Home</a>
+
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our People</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <!-- <li><a href="faq.html">Faq</a></li> -->
+                        <!-- <li><a href="pricing.html">Pricing</a></li> -->
+                      </ul>
+                    </li>
+
+                    <!-- <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="projects.html">All Projects</a></li>
+                        <li><a href="#">Residential</a></li>
+                        <li><a href="#">Commercial</a></li>
+                      </ul>
+                    </li> -->
+                   <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="./projects.html">RESIDENTIAL</a></li>
+                        <li><a href="./projects.html">COMMERCIAL</a></li>
+                        <!-- <li><a href="./">Testimonials</a></li> -->
+                        <!-- <li><a href="faq.html">Faq</a></li> -->
+                        <!-- <li><a href="pricing.html">Pricing</a></li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./services.html" class="nav-link">Services</a>
+
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="services.html">Services All</a></li>
+                        <li><a href="service-single.html">Services Single</a></li>
+                      </ul>
+                    </li> -->
+
+                    <!-- <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Parent Menu</a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#!">Child Menu 1</a></li>
+                                  <li><a href="#!">Child Menu 2</a></li>
+                                  <li><a href="#!">Child Menu 3</a></li>
+                                </ul>
+                            </li>
+                          </ul>
+                      </li> -->
+
+                    <!-- <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
+                            <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
+                            <li><a href="news-single.html">News Single</a></li>
+                          </ul>
+                      </li> -->
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <!--/ Col end -->
+          </div>
+          <!--/ Row end -->
+        </div>
+        <!--/ Container end -->
+
+      </div>
+      <!--/ Navigation end -->
+    </header>
+    <!--/ Header end -->
+    <div id="banner-area" class="banner-area" style="background-image:url(images/banner/projects.png)">
+      <div class="banner-text">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="banner-heading">
+                <h1 class="banner-title">Project</h1>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a >Home</a></li>
+                    <li class="breadcrumb-item"><a >Project</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">All Projects</li>
+                  </ol>
+                </nav>
+              </div>
+            </div><!-- Col end -->
+          </div><!-- Row end -->
+        </div><!-- Container end -->
+      </div><!-- Banner text end -->
+    </div><!-- Banner area end -->
+
+    <section id="project-area" class="project-area solid-bg">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <h2 class="section-title">Work of Excellence</h2>
+            <h3 class="section-sub-title">Our <span>Projects</span></h3>
+          </div>
+        </div>
+        <!--/ Title row end -->
+
+        <div class="row">
+          <div class="col-12">
+            <div class="shuffle-btn-group">
+              <label class="active" for="all">
+                <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Show All
+              </label>
+
+              <!-- <label for="education">
+            <input type="radio" name="shuffle-filter" id="education" value="education">Education
+          </label> -->
+              <!-- <label for="government">
+            <input type="radio" name="shuffle-filter" id="government" value="government">Government
+          </label> -->
+              <!-- <label for="infrastructure">
+            <input type="radio" name="shuffle-filter" id="infrastructure" value="infrastructure">Infrastructure
+          </label> -->
+              <label for="residential" >
+                <input type="radio" name="shuffle-filter" id="residential"  value="residential">Residential
+              </label>
+              <label for="commercial" >
+                <input type="radio" name="shuffle-filter" id="commercial"  value="commercial">Commercial
+              </label>
+              <label for="Ongoing">
+                <input type="radio" name="shuffle-filter" id="Ongoing" value="Ongoing">Ongoing
+              </label>
+              <label for="Completed">
+                <input type="radio" name="shuffle-filter" id="Completed" value="Completed">Completed
+              </label>
+              <!-- <label for="healthcare">
+            <input type="radio" name="shuffle-filter" id="healthcare" value="healthcare">Healthcare
+          </label> -->
+            </div><!-- project filter end -->
+
+
+            <div class="row shuffle-wrapper">
+
+
+
+              <div class="col-1 shuffle-sizer"></div>
+
+
+              <div class="col-lg-4 col-md-6 shuffle-item " data-groups="[&quot;residential&quot;,&quot;Ongoing&quot;]">
+
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/AARYAVAN Garden.jpg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/AARYAVAN Garden.jpg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link20" data-bs-toggle="modal"
+                          data-bs-target="#exampleModal">AARYAVAN</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        2023 & ongoing
+                      </p>
+                      <p class="project-cat">Residential</p>
+                       <a href="tel:7874608282">
+                        <p class="project-cat2">Inquire Now</p>
+                      </a>
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Ongoing&quot;]">
+
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/Harshilbhai_View_02.jpg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/Harshilbhai_View_02.jpg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link1" data-bs-toggle="modal"
+                          data-bs-target="#exampleModal">VIBGYOR -
+                          4BHK</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Prahlad nagar - 2023 & ongoing
+                      </p>
+                      <p class="project-cat">Residential</p>
+                       <a href="tel:7874608282">
+                        <p class="project-cat2">Inquire Now</p>
+                      </a>
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- shuffle item 15 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item"
+                data-groups="[&quot;residential&quot;,&quot;commercial&quot;,&quot;Ongoing&quot;]">
+
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/Aaryabhumi (1).JPG" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/Aaryabhumi (1).JPG" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link2">Aaryabhumi</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Jodhpur Cross Rd. - 2018
+                      </p>
+                      <p class="project-cat">Residential, Commercial</p>
+                       <a href="tel:7874608282">
+                        <p class="project-cat2">Inquire Now</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div><!-- shuffle item 12 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/ratna high street.jpg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/ratna high street.jpg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link3">Ratna High Street</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Naranpura- 2015-16
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- shuffle item 10 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/aaryavart heights.jpg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/aaryvart heights.jpeg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link4">Aaryavart Heights</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Prahladnagar - 2013
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div><!-- shuffle item 11 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/Aaryabhumi_shela.jpg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/Aaryabhumi_shela.jpg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link5">Aaryabhumi</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Club O7, Shela- 2008-10
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- shuffle item 13 end  -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/AARYAVART SKIES.jpeg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/AARYAVART SKIES.jpeg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link6">Aaryavart Skies</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        2006-07
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 5 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/aaryavart 4.jpg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/aaryavart 4.jpg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link7">Aaryavart Bunglows - 4</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Prahladnagar- 2006
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 9 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;commercial&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/aaryan corporate park.jpg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/aaryan corporate park.jpg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link8">Aaryan Corporate Park</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Shilaj - 2005-07
+                      </p>
+                      <p class="project-cat">Commertial</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 14 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/aaryavart 3.jpg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/aaryavart 3.jpg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link9">Aaryavart Bunglows - 3</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Prahladnagar- 2004
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 8 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/aaryavart 2.jpg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/aaryavart 2.jpg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link10">Aaryavart Bunglows - 2</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Prahladnagar - 2003
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 7 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/Aaryaneev Post.png" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/Aaryaneev Post.png" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link11">Vasavdatta Flats</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Paldi - 2003
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 2 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/aaryavart 1.jpg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/aaryavart 1.jpg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link12">Aaryavart Bunglows - 1</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Prahladnagar- 1999-2000
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 6 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/AARYAVART RESIDENCY.jpeg" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/AARYAVART RESIDENCY.jpeg" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link13">Aaryavart Residency</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Nehru Nagar- 1996
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 4 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/Aaryaneev Post.png" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/Aaryaneev Post.png" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link14">Aangi</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Paldi - 1995
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 3 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;,&quot;Completed&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/Aaryaneev Post.png" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/Aaryaneev Post.png" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link15">Aangan</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Usmanpura - 1995
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 15 end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;] ">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/Aaryaneev Post.png" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/Aaryaneev Post.png" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link16">Aarovan Apartment</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Ankur Cross Rd - 1993
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 15 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/Aaryaneev Post.png" width="100%" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/Aaryaneev Post.png" width="100%" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link17">Abhushan</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Ankur Cross Rd. - 1992
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 15 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/Aaryaneev Post.png" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/Aaryaneev Post.png" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="./projects-single.html?content=link18">Ranchhod Colony</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Amarwadi - 1989
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 15 end -->
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/projects/Aaryaneev Post.png" aria-label="project-img">
+                    <img class="img-fluid" src="images/projects/Aaryaneev Post.png" alt="project-img">
+                    <!-- <span class="gallery-icon"><i class="fa fa-plus"></i></span> -->
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <!-- <a href="projects-single.html">Capital Teltway Building</a> -->
+                        <a href="./projects-single.html?content=link19">Aardhan Flats</a>
+                      </h3>
+                      <p class="project-item-title2">
+                        Naranpura - 1989
+                      </p>
+                      <p class="project-cat">Residential</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- shuffle item 1 end -->
+
+
+
+
+
+
+
+            </div><!-- shuffle end -->
+          </div>
+
+          <!-- <div class="col-12">
+        <div class="general-btn text-center">
+          <a class="btn btn-primary" href="projects.html">View All Projects</a>
+        </div>
+      </div> -->
+
+        </div><!-- Content row end -->
+      </div>
+      <!--/ Container end -->
+    </section><!-- Project area end -->
+
+    <footer id="footer" class="footer bg-overlay">
+      <div class="footer-main">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-4 col-md-6 footer-widget footer-about">
+              <h3 class="widget-title">About Us</h3>
+              <img loading="lazy" class="footer-logo" src="img/Aaryaneev_logo.png" alt="Constra">
+              <p>With decades of experience in construction, we offer unwavering excellence and dependable expertise, ensuring our clients receive top-quality service and results.</p>
+              <div class="footer-social">
+                <ul>
+                  <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li><a href="https://instagram.com/aaryaneev.developer?igshid=MzRlODBiNWFlZA=="
+                      aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#" aria-label="Github"><i class="fab fa-github"></i></a></li>
+                </ul>
+              </div><!-- Footer social end -->
+            </div><!-- Col end -->
+
+            <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+              <h3 class="widget-title">Working Hours</h3>
+              <div class="working-hours">
+                We are available to assist you every day of the week, except for major holidays. Please don't hesitate to reach out in case of an emergency using our hotline or the contact form.
+                <br><br> <b>Monday - Sunday:</b> <span class="text-right">10:30 AM - 7:30 PM </span>
+                <br> <b>Contact no:</b> <span class="text-right">+91 79847 38681</span>
+                <!--<br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span> -->
+              </div>
+            </div><!-- Col end -->
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
+              <h3 class="widget-title">Quick Links</h3>
+              <ul class="list-arrow">
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Our People</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+              </ul>
+            </div><!-- Col end -->
+          </div><!-- Row end -->
+        </div><!-- Container end -->
+      </div><!-- Footer main end -->
+
+      <div class="copyright">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="copyright-info text-center">
+                <span>Copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear())
+                  </script>, Designed &amp; Developed by <a href="https://outleadsolutions.com/">Outleads Solutions</a>
+                </span>
+              </div>
+            </div>
+
+
+            <!-- <div class="col-md-12">
+            <div class="footer-menu text-center">
+              <ul class="list-unstyled mb-0">
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Our people</a></li>
+                <li><a href="faq.html">Faq</a></li>
+                <li><a href="news-left-sidebar.html">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+
+            <!-- Row end -->
+
+            <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+              <button class="btn btn-primary" title="Back to Top">
+                <i class="fa fa-angle-double-up"></i>
+              </button>
+            </div>
+
+          </div><!-- Container end -->
+        </div><!-- Copyright end -->
+    </footer><!-- Footer end -->
+
+
+    <!-- Javascript Files
+  ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap jQuery -->
+    <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+    <!-- Slick Carousel -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/slick/slick-animation.min.js"></script>
+    <!-- Color box -->
+    <script src="plugins/colorbox/jquery.colorbox.js"></script>
+    <!-- shuffle -->
+    <script src="plugins/shuffle/shuffle.min.js" defer></script>
+
+
+    <!-- Google Map API Key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+    <!-- Google Map Plugin-->
+    <script src="plugins/google-map/map.js" defer></script>
+
+    <!-- Template custom -->
+    <script src="js/script.js"></script>
     <script>
-      // Get the modal and buttons
-      var modal = document.getElementById("myModal");
-      var closeModal = document.getElementById("closeModal");
-      var modalContent = document.getElementById("modalContent");
+          // Parse the URL to get the selected option
+      const urlParams = new URLSearchParams(window.location.search);
+      const selectedOption = urlParams.get("option");
 
-      // Function to open the modal
-      function openModal() {
-        modal.style.display = "block";
-      }
-
-      // Function to close the modal
-      function closeModalFunction() {
-        modal.style.display = "none";
-        modalContent.innerHTML = ""; // Clear the gallery when closing
-      }
-
-      // Function to populate the image gallery in a single line
-      function populateGallery(images) {
-        modalContent.innerHTML = ""; // Clear the gallery before adding new images
-        images.forEach(function (imageSrc) {
-          var img = document.createElement("img");
-          img.src = imageSrc;
-          img.className = "img-fluid"; // Add a class for responsive images
-          modalContent.appendChild(img);
-        });
-      }
-
-      // Event listeners for the buttons
-      document.getElementById("button3").addEventListener("click", function () {
-        openModal();
-        // Replace this with the image URLs for a different gallery
-        var images = [
-          "./assets/img/1-7.jpg",
-          "./assets/img/digvijaysingh1.jpg",
-          "image9.jpg",
-          // Add more image URLs as needed
-        ];
-        populateGallery(images);
+      // Remove the "active" class from all labels
+      const labels = document.querySelectorAll(".label");
+      labels.forEach(function (label) {
+        label.classList.remove("active");
       });
+
+      // Apply the "active" class to the corresponding label
+      const selectedLabel = document.getElementById(selectedOption);
+      if (selectedLabel) {
+        selectedLabel.classList.add("active");
+      }
     </script>
-  </body>
+
+  </div><!-- Body inner end -->
+</body>
+
 </html>

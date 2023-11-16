@@ -70,7 +70,7 @@
         border-radius: 5px;
         transition: all 0.3s ease;
       }
-      @media (max-width: 960px) {
+      @media (max-width: 700px) {
         .nav-links li a {
           color: black;
           text-decoration: none;
@@ -104,7 +104,7 @@
       .nav-links li:hover .drop-menu,
       .nav-links li:hover .mega-box {
         transition: all 0.3s ease;
-        top: 120px;
+        top: 70px;
         opacity: 1;
         visibility: visible;
       }
@@ -120,7 +120,7 @@
 
       .mega-box {
         position: absolute;
-        /* left: 0; */
+        left: 0;
         width: 100%;
         padding: 0 30px;
         top: 85px;
@@ -132,8 +132,7 @@
         background: #e8e8e8;
         padding: 25px 20px;
         display: flex;
-        flex-direction: column;
-        width: 15%;
+        width: 100%;
         justify-content: space-between;
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
       }
@@ -141,12 +140,6 @@
       .mega-box .content .row {
         width: calc(25% - 30px);
         line-height: 45px;
-      }
-      .mega-box .content .row a {
-        color: black;
-      }
-      .mega-box .content .row a:hover {
-        color: #198754;
       }
 
       .content .row img {
@@ -198,15 +191,6 @@
       @media screen and (max-width: 970px) {
         .wrapper .btn {
           display: block;
-        }
-        .mega-box .content {
-          background: #e8e8e8;
-          padding: 25px 20px;
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          justify-content: space-between;
-          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
 
         .wrapper .nav-links {
@@ -428,31 +412,13 @@
   <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <!-- <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="./assets/img/logos/logo2 (1).png" alt="..." /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div> -->
-      <div class="wrapper">
-        <div class="logo">
-          <a href="./index.html"
-            ><img src="./assets/img/logos/logo2 (1).png" width="20%" alt=""
-          /></a>
-        </div>
-
-        <div>
+      <div class="container">
+        <div class="wrapper">
+          <div class="logo">
+            <a href="./index.html"
+              ><img src="./assets/img/logos/logo2 (1).png" width="20%" alt=""
+            /></a>
+          </div>
           <input type="radio" name="slider" id="menu-btn" />
           <input type="radio" name="slider" id="close-btn" />
           <ul class="nav-links" style="margin: 0">
@@ -460,63 +426,27 @@
               ><i class="fas fa-times"></i
             ></label>
             <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item">
-              <a href="./About.html" class="nav-link">About</a>
-            </li>
-            <!-- <li class="nav-item">
-            <a href="#" class="desktop-item nav-link">Dropdown Menu</a>
-            <input type="checkbox" id="showDrop" />
-            <label for="showDrop" class="mobile-item">Dropdown Menu</label>
-            <ul class="drop-menu">
-              <li><a href="#">Drop menu 1</a></li>
-              <li><a href="#">Drop menu 2</a></li>
-              <li><a href="#">Drop menu 3</a></li>
-              <li><a href="#">Drop menu 4</a></li>
-            </ul>
-          </li> -->
-            <li class="nav-item">
-              <a href="#" class="desktop-item nav-link">New Arrivals</a>
-              <input type="checkbox" id="showMega" />
-              <label for="showMega" class="mobile-item">New Arrivals</label>
-              <div class="mega-box">
-                <div class="content">
-                  <!-- <div class="row">
-                    <img src="./assets/img/1-7.jpg" alt="" />
-                  </div> -->
-                  <div class="row">
-                    <a href="./Menswear.html">Mens&nbsp;Wear</a>
-                  </div>
-                  <div class="row">
-                    <a href="./Womenswear.html">Womens&nbsp;Wear</a>
-                  </div>
-                  <!-- <div class="row">
-                  <header>Demo</header>
-                  <ul class="mega-links">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Demo</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Demo</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Demo</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Demo</a>
-                    </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link">About</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Overview</a></li>
+                <li class="dropdown">
+                  <a href="#" class="nav-link">Nested Dropdown</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Nested Item 1</a></li>
+                    <li><a href="#">Nested Item 2</a></li>
                   </ul>
-                </div> -->
-                </div>
-              </div>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
               <a href="./contact.html" class="nav-link">Contact us</a>
             </li>
           </ul>
+          <label for="menu-btn" class="btn menu-btn"
+            ><i class="fas fa-bars"></i
+          ></label>
         </div>
-        <label for="menu-btn" class="btn menu-btn"
-          ><i class="fas fa-bars"></i
-        ></label>
       </div>
     </nav>
     <div id="carouselExampleCaptions" class="carousel slide">
@@ -1118,7 +1048,7 @@
       </div>
     </section> -->
 
-    <section class="videos">
+    <!-- <section class="videos">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-6">
@@ -1147,7 +1077,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Clients-->
     <!-- <div class="py-5">
       <div class="container">

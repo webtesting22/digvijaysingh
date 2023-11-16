@@ -43,6 +43,9 @@
     https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
     />
     <style>
+      .row .mega-links li .parent_link {
+        font-weight: 600;
+      }
       nav .wrapper {
         position: relative;
         /* max-width: 1300px; */
@@ -80,7 +83,7 @@
         border-radius: 5px;
         transition: all 0.3s ease;
       }
-      @media (max-width: 700px) {
+      @media (max-width: 960px) {
         .nav-links li a {
           color: black;
           text-decoration: none;
@@ -114,7 +117,7 @@
       .nav-links li:hover .drop-menu,
       .nav-links li:hover .mega-box {
         transition: all 0.3s ease;
-        top: 70px;
+        top: 103px;
         opacity: 1;
         visibility: visible;
       }
@@ -130,7 +133,7 @@
 
       .mega-box {
         position: absolute;
-        left: 0;
+        /* left: 0; */
         width: 100%;
         padding: 0 30px;
         top: 85px;
@@ -142,7 +145,8 @@
         background: #e8e8e8;
         padding: 25px 20px;
         display: flex;
-        width: 100%;
+        flex-direction: column;
+        width: 15%;
         justify-content: space-between;
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
       }
@@ -150,6 +154,12 @@
       .mega-box .content .row {
         width: calc(25% - 30px);
         line-height: 45px;
+      }
+      .mega-box .content .row a {
+        color: black;
+      }
+      .mega-box .content .row a:hover {
+        color: #198754;
       }
 
       .content .row img {
@@ -201,6 +211,15 @@
       @media screen and (max-width: 970px) {
         .wrapper .btn {
           display: block;
+        }
+        .mega-box .content {
+          background: #e8e8e8;
+          padding: 25px 20px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: space-between;
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
 
         .wrapper .nav-links {
@@ -483,19 +502,21 @@
             ><img src="./assets/img/logos/logo2 (1).png" width="20%" alt=""
           /></a>
         </div>
-        <input type="radio" name="slider" id="menu-btn" />
-        <input type="radio" name="slider" id="close-btn" />
-        <ul class="nav-links" style="margin: 0">
-          <label for="close-btn" class="btn close-btn"
-            ><i class="fas fa-times"></i
-          ></label>
-          <li class="nav-item">
-            <a href="./index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="./About.html" class="nav-link">About</a>
-          </li>
-          <!-- <li class="nav-item">
+
+        <div>
+          <input type="radio" name="slider" id="menu-btn" />
+          <input type="radio" name="slider" id="close-btn" />
+          <ul class="nav-links" style="margin: 0">
+            <label for="close-btn" class="btn close-btn"
+              ><i class="fas fa-times"></i
+            ></label>
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="./About.html" class="nav-link">About</a>
+            </li>
+            <!-- <li class="nav-item">
             <a href="#" class="desktop-item nav-link">Dropdown Menu</a>
             <input type="checkbox" id="showDrop" />
             <label for="showDrop" class="mobile-item">Dropdown Menu</label>
@@ -506,134 +527,22 @@
               <li><a href="#">Drop menu 4</a></li>
             </ul>
           </li> -->
-          <li class="nav-item">
-            <a href="#" class="desktop-item nav-link">New Arrivals</a>
-            <input type="checkbox" id="showMega" />
-            <label for="showMega" class="mobile-item">New Arrivals</label>
-            <div class="mega-box">
-              <div class="content">
-                <div class="row">
-                  <img src="./assets/img/1-7.jpg" alt="" />
-                </div>
-                <div class="row">
-                  <header>Mens Wear</header>
-                  <ul class="mega-links">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Artwear</a>
-                      <ul class="mega-links">
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Kotis</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Shirts</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Jackets</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                        <a href="#" class="nav-link"></a>
-                        </li> -->
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Resort</a>
-                      <ul class="mega-links">
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Shirts</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                        <a href="#" class="nav-link">Dresses</a>
-                        </li> -->
-                        <!-- <li class="nav-item">
-                        <a href="#" class="nav-link">Demo</a>
-                        </li>
-                        <li class="nav-item">
-                        <a href="#" class="nav-link"></a>
-                        </li> -->
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Classic</a>
-                      <ul class="mega-links">
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Jackets</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">shervanees</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Kurtas</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                        <a href="#" class="nav-link"></a>
-                        </li> -->
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link"></a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="row">
-                  <header>Womens Wear</header>
-                  <ul class="mega-links">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Artwear</a>
-                      <ul class="mega-links">
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Jackets</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Dresses</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                        <a href="#" class="nav-link">Demo</a>
-                        </li>
-                        <li class="nav-item">
-                        <a href="#" class="nav-link"></a>
-                        </li> -->
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Resort Wear</a>
-                      <ul class="mega-links">
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Shorts</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Dresses</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                        <a href="#" class="nav-link">Demo</a>
-                        </li>
-                        <li class="nav-item">
-                        <a href="#" class="nav-link"></a>
-                        </li> -->
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Classic Wear</a>
-                      <ul class="mega-links">
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Lehengas</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#" class="nav-link">Dresses </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                        <a href="#" class="nav-link">Demo</a>
-                        </li>
-                        <li class="nav-item">
-                        <a href="#" class="nav-link"></a>
-                        </li> -->
-                      </ul>
-                    </li>
-                    <!-- <li class="nav-item">
-                      <a href="#" class="nav-link"></a>
-                    </li> -->
-                  </ul>
-                </div>
-                <!-- <div class="row">
+            <li class="nav-item">
+              <a href="#" class="desktop-item nav-link">New Arrivals</a>
+              <input type="checkbox" id="showMega" />
+              <label for="showMega" class="mobile-item">New Arrivals</label>
+              <div class="mega-box">
+                <div class="content">
+                  <!-- <div class="row">
+                    <img src="./assets/img/1-7.jpg" alt="" />
+                  </div> -->
+                  <div class="row">
+                    <a href="./Menswear.html">Mens&nbsp;Wear</a>
+                  </div>
+                  <div class="row">
+                    <a href="./Womenswear.html">Womens&nbsp;Wear</a>
+                  </div>
+                  <!-- <div class="row">
                   <header>Demo</header>
                   <ul class="mega-links">
                     <li class="nav-item">
@@ -650,13 +559,14 @@
                     </li>
                   </ul>
                 </div> -->
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="./contact.html" class="nav-link">Contact us</a>
-          </li>
-        </ul>
+            </li>
+            <li class="nav-item">
+              <a href="./contact.html" class="nav-link">Contact us</a>
+            </li>
+          </ul>
+        </div>
         <label for="menu-btn" class="btn menu-btn"
           ><i class="fas fa-bars"></i
         ></label>

@@ -392,10 +392,12 @@
 
       .close {
         position: absolute;
-        right: 10px;
-        top: 10px;
-        font-size: 24px;
+        right: -4px;
+        top: -6px;
+        font-size: 20px;
         cursor: pointer;
+        /* background: red; */
+        padding: 2px 10px;
       }
 
       /* Mobile styles */
@@ -411,16 +413,27 @@
           width: 80%;
         }
       }
-
+      .modal-content .image-gallery img {
+        border: 2px solid white;
+        max-width: 33.33%;
+      }
+      @media (max-width: 600px) {
+        .modal-content .image-gallery img {
+          border: 2px solid white;
+          max-width: 100%;
+        }
+      }
+      @media (min-width: 600px) and (max-width: 1000px) {
+        .modal-content .image-gallery img {
+          border: 2px solid white;
+          max-width: 50%;
+        }
+      }
       /* PC styles */
       @media screen and (min-width: 1025px) {
         .modal-content {
           width: 70%;
         }
-      }
-      .modal-content .image-gallery img {
-        margin: 5px; /* Add a slight margin around each image */
-        /* max-width: 30%; Ensure images don't exceed their container width */
       }
     </style>
   </head>

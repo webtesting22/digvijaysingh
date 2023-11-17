@@ -12616,6 +12616,11 @@ section#contact form#contactForm :-ms-input-placeholder {
   width: 110px;
 }
 
+#about p {
+  font-size: 15px;
+  opacity: 0.8;
+  margin-bottom: 70px;
+}
 @media (max-width: 967px) {
   #mainNav .wrapper {
     display: flex;
@@ -12628,6 +12633,12 @@ section#contact form#contactForm :-ms-input-placeholder {
     margin: auto;
     /* text-align: center; */
     width: 100px;
+  }
+  #about p {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 70px;
+    text-align: justify;
   }
 }
 

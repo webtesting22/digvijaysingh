@@ -12635,11 +12635,11 @@ section#contact form#contactForm :-ms-input-placeholder {
   display: block;
   position: fixed;
   left: -50px;
-  bottom: -55px;
+  bottom: 60px;
   visibility: hidden;
   background-color: transparent;
-  width: 200px;
-  height: 200px;
+  width: 125px;
+  height: 82px;
   cursor: pointer;
   z-index: 999;
   -webkit-backface-visibility: hidden;

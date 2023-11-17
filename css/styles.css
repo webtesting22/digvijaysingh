@@ -13152,3 +13152,10 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin-left: -60px;
   border-radius: 100%;
 }
+
+.btn-sm {
+  position: fixed;
+  right: -37px;
+  bottom: 0;
+  padding: 13px 21px;
+}

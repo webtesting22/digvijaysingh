@@ -589,6 +589,13 @@
         <div class="cbh-ph-img-circle1"></div
       ></a>
     </div>
+    <button
+      class="btn btn-sm btn-primary translate-middle d-none"
+      onclick="scrollToTop()"
+      id="back-to-up"
+    >
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
     <!-- wpp-btn-mobile -->
     <!-- Footer-->
     <footer class="footer py-4">
@@ -662,6 +669,23 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script>
+      window.onscroll = () => {
+        toggleTopButton();
+      };
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function toggleTopButton() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("back-to-up").classList.remove("d-none");
+        } else {
+          document.getElementById("back-to-up").classList.add("d-none");
+        }
+      }
       function performSearch() {
         var searchQuery = document.getElementById("search-input").value;
         var searchResults = document.getElementById("search-results");

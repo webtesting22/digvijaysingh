@@ -12722,17 +12722,17 @@ section#contact form#contactForm :-ms-input-placeholder {
   opacity: 1;
 }
 .cbh-ph-circle {
-  width: 110px;
-  height: 110px;
+  /* width: 110px;
+  height: 110px; */
   top: 40px;
   left: 40px;
   position: absolute;
-  background-color: transparent;
+  /* background-color: transparent; */
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  border: 2px solid rgba(30, 30, 30, 0.4);
-  opacity: 0.1;
+  /* border: 2px solid rgba(30, 30, 30, 0.4); */
+  /* opacity: 0.1; */
   -webkit-animation: cbh-circle-anim 1.2s infinite ease-in-out;
   -moz-animation: cbh-circle-anim 1.2s infinite ease-in-out;
   -ms-animation: cbh-circle-anim 1.2s infinite ease-in-out;

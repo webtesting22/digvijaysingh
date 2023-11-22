@@ -13170,3 +13170,13 @@ section#contact form#contactForm :-ms-input-placeholder {
   bottom: 0;
   padding: 13px 21px;
 }
+.logo {
+  margin: auto;
+}
+.menu-btn {
+  position: absolute;
+  right: 17px;
+}
+.z-index_adjust {
+  z-index: 200;
+}

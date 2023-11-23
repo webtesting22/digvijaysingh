@@ -13268,3 +13268,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin: 10px 0;
 
 }
+
+#back-to-up:focus{
+  box-shadow: none;
+}

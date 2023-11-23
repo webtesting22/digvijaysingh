@@ -13272,3 +13272,20 @@ section#contact form#contactForm :-ms-input-placeholder {
 #back-to-up:focus{
   box-shadow: none;
 }
+
+.timeline-inverted_none{
+  display: flex;
+  align-items: center;
+}
+
+
+@media (min-width:1300px) and (max-width:1800px){
+  .timeline-inverted .margin_adj{
+    margin-top: 35px;
+  }
+}
+@media (min-width:1000px) and (max-width:1300px){
+  .timeline-inverted .margin_adj{
+    margin-top: 35px;
+  }
+}

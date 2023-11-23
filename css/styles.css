@@ -13287,3 +13287,10 @@ section#contact form#contactForm :-ms-input-placeholder {
     margin-top: 35px;
   }
 }
+
+.customNavigation h3{
+  color: black;
+}
+.customNavigation h3 span{
+  color: #198754;
+}

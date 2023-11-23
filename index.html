@@ -487,6 +487,7 @@
       color: black;
 
     }
+
     /* .accordion-item:hover
    {
       background-color: #198754;
@@ -630,7 +631,7 @@
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed main_btn" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button main_btn" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     Womens Wear
                   </button>
@@ -642,27 +643,29 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#subCollapseOne" aria-expanded="true" aria-controls="subCollapseOne">
+                            data-bs-target="#subCollapseThree" aria-expanded="false" aria-controls="subCollapseThree">
                             Artwear
                           </button>
                         </h2>
-                        <div id="subCollapseOne" class="accordion-collapse collapse" data-bs-parent="#subAccordion">
+                        <div id="subCollapseThree" class="accordion-collapse collapse" data-bs-parent="#subAccordion">
                           <div class="accordion-body">
-                            <ul class="Sub_li">
-                              <li><a href="">Jackets</a></li>
-                              <li><a href="">Dresses</a></li>
-                            </ul>
+                            <div class="accordion-body">
+                              <ul class="Sub_li">
+                                <li><a href="">Jackets</a></li>
+                                <li><a href="">Dresses</a></li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#subCollapseTwo" aria-expanded="false" aria-controls="subCollapseTwo">
+                            data-bs-target="#subCollapseseven" aria-expanded="false" aria-controls="subCollapseseven">
                             Resort Wear
                           </button>
                         </h2>
-                        <div id="subCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#subAccordion">
+                        <div id="subCollapseseven" class="accordion-collapse collapse" data-bs-parent="#subAccordion">
                           <div class="accordion-body">
                             <ul class="Sub_li">
                               <li><a href="">Shirts</a></li>
@@ -674,13 +677,13 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#subCollapseThree" aria-expanded="false" aria-controls="subCollapseThree">
+                            data-bs-target="#subCollapseEight" aria-expanded="false" aria-controls="subCollapseEight">
                             Classic Wear
                           </button>
                         </h2>
-                        <div id="subCollapseThree" class="accordion-collapse collapse" data-bs-parent="#subAccordion">
+                        <div id="subCollapseEight" class="accordion-collapse collapse" data-bs-parent="#subAccordion">
                           <div class="accordion-body">
-                            <ul class="Sub_li"  >
+                            <ul class="Sub_li">
                               <li><a href="">Lehengas</a></li>
                               <li><a href="">Dresses</a></li>
                             </ul>
@@ -692,6 +695,7 @@
                   </div>
                 </div>
               </div>
+              
             </div>
           </li>
           <li class="nav-item">
@@ -1763,8 +1767,8 @@
   <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
   <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   <script>
-   
-  
+
+
     window.onscroll = () => {
       toggleTopButton();
     };

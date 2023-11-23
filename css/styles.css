@@ -3238,7 +3238,7 @@ fieldset:disabled .btn {
   border-color: #4f876c;
 }
 
-.btn-secondary {
+/* .btn-secondary {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
@@ -3248,7 +3248,7 @@ fieldset:disabled .btn {
   color: #fff;
   background-color: #5c636a;
   border-color: #565e64;
-}
+} */
 
 .btn-check:focus + .btn-secondary,
 .btn-secondary:focus {
@@ -12347,18 +12347,16 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-  background-color: #212529;
+  background-color: #f6f6f6;
   /* background-image: url("../assets/img/map-image.png"); */
   background-repeat: no-repeat;
   background-position: center;
 }
 
 section#contact .section-heading {
-  color: #fff;
+  color: black;
 }
-section#contact .section-heading {
-  color: #fff;
-}
+
 
 section#contact form#contactForm .form-group {
   margin-bottom: 1.5rem;

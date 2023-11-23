@@ -13180,3 +13180,91 @@ section#contact form#contactForm :-ms-input-placeholder {
 .z-index_adjust {
   z-index: 200;
 }
+
+
+#accordionExample {
+  position: absolute;
+  /* margin-top: 4px; */
+  margin-left: -39px;
+}
+
+.accordion {
+  display: none;
+
+}
+
+.accordion-button {
+  width: 300px;
+}
+
+#accordionExample .accordion-button::after {
+  content: none;
+}
+
+@media (max-width:968px) {
+  #accordionExample {
+    position: static;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .accordion-button {
+    width: 100%;
+  }
+
+  #accordionExample .accordion-button::after {
+    content: "";
+  }
+
+}
+
+
+
+.nav-item:hover .accordion {
+  display: block;
+}
+
+
+
+/* #DropdownLi{
+  margin-top: 9px;
+} */
+.accordion-body {
+
+  padding: 0;
+}
+
+.accordion-item .accordion-button,
+.accordion-button:focus,
+.accordion-button:active {
+  box-shadow: none;
+  background-color: transparent;
+  color: black;
+
+}
+
+/* .accordion-item:hover
+{
+  background-color: #198754;
+  color: white;
+} */
+
+.accordion-item:hover .accordion-button:hover,
+.accordion-button:focus:hover,
+.accordion-button:active:hover {
+  color: #198754;
+}
+
+.main_btn {
+  font-weight: 600;
+}
+
+.Sub_li {
+  margin: 10px 0;
+}
+
+.Sub_li li a {
+  color: black;
+  margin: 10px 0;
+
+}
